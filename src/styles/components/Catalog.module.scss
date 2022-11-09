@@ -1,0 +1,79 @@
+@use 'styles/_' as *;
+
+.section {
+  padding: 0 0 20px;
+
+  @include m-l {
+    padding: 0 0 60px;
+  }
+}
+
+.section-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @include m-s {
+    flex-direction: column;
+  }
+}
+
+/* item */
+
+.item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 250px;
+  border: 2px solid $c-b-main;
+  background: $c-bg-secondary;
+  padding: 0 0 2px;
+  @include m-s {
+    flex-basis: auto;
+  }
+}
+
+.item-image {
+  height: 140px;
+  background-color: $c-bg-accents;
+  border-bottom: 2px solid $c-b-main;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+}
+
+.item-data {
+  padding: 0 5px 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item-header {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.item-desc {
+  font-size: 0.8rem;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-price {
+  font-size: 1.05rem;
+}
+
+.item-buy-btn {
+  color: $c-f-secondary;
+  background: $c-bg-accents;
+  border: 2px solid $c-b-main;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0 8px;
+  @include _interactive;
+}
